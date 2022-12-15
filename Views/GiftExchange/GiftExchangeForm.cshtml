@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Create Gift Exchange";
+}
+@model GiftExchange
+<div>
+    @await Html.PartialAsync("_Navbar")
+
+    <h1 class="text-center">Create a new Gift Exchange</h1>
+
+    <form asp-action="CreateGiftExchange" asp-controller="GiftExchange" method="post">
+
+        <div class="m-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="m-3">
+            <label asp-for="GroupCode"></label>
+            <input asp-for="GroupCode" class="form-control">
+            <span asp-validation-for="GroupCode" class="text-danger"></span>
+        </div>
+
+        <div class="m-3">
+            <label asp-for="Budget"></label>
+            <input asp-for="Budget" class="form-control">
+            <span asp-validation-for="Budget" class="text-danger"></span>
+        </div>
+        
+        <div class="m-3">
+            <label asp-for="ExchangeDate"></label>
+            <input asp-for="ExchangeDate" class="form-control">
+            <span asp-validation-for="ExchangeDate" class="text-danger"></span>
+        </div>
+
+        <div class="m-3">
+            <label asp-for="Details"></label>
+            <textarea asp-for="Details" class="form-control"></textarea>
+            <span asp-validation-for="Details" class="text-danger"></span>
+        </div>
+
+        <input type="hidden" asp-for="UserId" value=@Context.Session.GetInt32("UserId") >
+
+        <div class="text-center">
+            <button type="submit">Create Gift Exchange</button>
+        </div>
+        
+    </form>
+</div>

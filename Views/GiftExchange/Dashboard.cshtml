@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+@model MyViewModel
+<div>
+    @await Html.PartialAsync("_Navbar")
+
+    <div class="d-flex justify-content-evenly">
+        <a class="m-4 p-4 border border-2 rounded fs-2" href="/dashboard">Join A Gift Exchange</a>
+        <a class="m-4 p-4 border border-2 rounded fs-2" href="/giftexchanges/new">Create A Gift Exchange</a>
+    </div>
+
+    <div class="text-center">
+        <h1>Your Gift Exchanges</h1> 
+
+        @foreach(GiftExchange g in Model.AllGiftExchanges)
+        {
+            <p>@g.Name</p>
+        }
+
+    </div>
+
+</div>

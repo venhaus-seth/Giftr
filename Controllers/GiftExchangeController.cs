@@ -19,7 +19,7 @@ public class GiftExchangeController : Controller
 
 //******************************DASHBOARD***********************************************
     [SessionCheck]
-    [HttpGet("giftexchanges")]
+    [HttpGet("giftexchange/dashboard")]
     public IActionResult Dashboard()
     {
         MyViewModel MyModels = new MyViewModel

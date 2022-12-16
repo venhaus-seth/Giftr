@@ -1,8 +1,8 @@
 <div class="d-flex justify-content-around m-4">
-    <h3>Welcome @Context.Session.GetString("Username")</h3>
+    <h3 class="d-flex align-items-center">Logged in as<span class="text-info m-2"> @Context.Session.GetString("Username")</span></h3>
     <div>
         @* why is home button not work inside  *@
-        <a class="m-3" href="/giftexchange/dashboard"><span class="fs-5">Home</span></a>
-        <a class="m-3" href="/logout"><span class="fs-5">Logout</span></a>
+        <a class="m-3 btn border" href="/giftexchange/dashboard"><span class="fs-5">Home</span></a>
+        <a class="m-3 btn border" href="/logout"><span class="fs-5">Logout</span></a>
     </div>
 </div>

@@ -35,7 +35,7 @@ public class HomeController : Controller
             _context.SaveChanges();
 
             HttpContext.Session.SetInt32("UserId", newUser.UserId);
-            HttpContext.Session.SetString("FName", newUser.Username);
+            HttpContext.Session.SetString("Username", newUser.Username);
             return RedirectToAction("Dashboard");
         } else {
             return View("Index");
@@ -65,7 +65,7 @@ public class HomeController : Controller
             }
 
             HttpContext.Session.SetInt32("UserId", userInDb.UserId);
-            HttpContext.Session.SetString("FName", userInDb.Username);
+            HttpContext.Session.SetString("Username", userInDb.Username);
             return RedirectToAction("Dashboard", "GiftExchange");
 
         } else {

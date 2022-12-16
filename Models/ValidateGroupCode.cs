@@ -6,7 +6,6 @@ public class ValidateGroupCode
     [Required]
     [Display(Name = "All Gift Exchanges")]
     public int VGiftExchangeId { get; set; } 
-    public int VUserId {get;set;}
     
     [Required]
     [DataType(DataType.Password)]

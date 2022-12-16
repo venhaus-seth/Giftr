@@ -24,7 +24,10 @@ public class GiftExchangeController : Controller
     {
         MyViewModel MyModels = new MyViewModel
         {
-            AllGiftExchanges = _context.GiftExchanges.OrderBy(c=>c.ExchangeDate).ToList()
+            AllGiftExchanges = _context.GiftExchanges.Include(ge=>ge.MemberList)
+                                                    .ThenInclude(m=>m.User)
+                                                    .OrderBy(ge=>ge.ExchangeDate)
+                                                    .ToList()
         };
 
         return View(MyModels);
@@ -50,5 +53,21 @@ public class GiftExchangeController : Controller
             return RedirectToAction("Dashboard");
         }
         return View("GiftExchangeForm");
+    }
+
+//******************************DISPLAY GIFT EXCHANGE and MEMBERS***********************************************
+    [SessionCheck]
+    [HttpGet("giftexchanges/{GiftExchangeId}")]
+    public IActionResult OneGiftExchange(int GiftExchangeId)
+    {
+        System.Console.WriteLine("test");
+        MyViewModel MyModels = new MyViewModel
+        {
+            GiftExchange = _context.GiftExchanges.Include(ge=>ge.MemberList)
+                                        .ThenInclude(m=>m.User)
+                                        .FirstOrDefault(ge=>ge.GiftExchangeId == GiftExchangeId)
+        };
+
+        return View(MyModels);
     }
 }

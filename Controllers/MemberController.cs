@@ -28,21 +28,22 @@ public class MemberController : Controller
 
     [SessionCheck]
     [HttpPost("members/create")]
-    public IActionResult CreateMember(Member newMember)
+    public IActionResult CreateMember(ValidateGroupCode newMember)
     {
-        // if (ModelState.IsValid)
-        // {
-        //     ModelState.AddModelError("VGroupCode", "Invalid Group Code");
-        //     return View("MemberForm");
-        // }
 
         GiftExchange? giftExchangeInDb = _context.GiftExchanges.FirstOrDefault(c=>c.GiftExchangeId == newMember.VGiftExchangeId);
-            
+
+        Member MemberToAdd = new Member()
+        {
+        UserId = (int)HttpContext.Session.GetInt32("UserId"),
+        GiftExchangeId = newMember.VGiftExchangeId
+        };
+
         if(newMember.VGroupCode == giftExchangeInDb.GroupCode)
         {
-            _context.Members.Add(newMember);
+            _context.Members.Add(MemberToAdd);
             _context.SaveChanges();
-            return RedirectToAction("Dashboard");
+            return RedirectToAction("Dashboard", "GiftExchange");
         }
         return View("MemberForm");
     }

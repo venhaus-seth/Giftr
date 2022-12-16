@@ -36,7 +36,7 @@ public class HomeController : Controller
 
             HttpContext.Session.SetInt32("UserId", newUser.UserId);
             HttpContext.Session.SetString("Username", newUser.Username);
-            return RedirectToAction("Dashboard");
+            return RedirectToAction("Dashboard", "GiftExchange");
         } else {
             return View("Index");
         }

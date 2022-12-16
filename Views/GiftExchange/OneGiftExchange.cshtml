@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Gift Exchange Details";
+}
+@model MyViewModel
+<div>
+    @await Html.PartialAsync("_Navbar")
+
+    <h1 class="text-center">The @Model.GiftExchange.Name Gift Exchange</h1>
+
+    <div class="text-center">
+        @foreach (Member m in Model.GiftExchange.MemberList)
+        {
+            <p class="m-3">@m.User.Username</p>
+        }
+    </div>
+
+</div>

@@ -12,12 +12,17 @@
 
     <div class="text-center">
         <h1>Your Gift Exchanges</h1> 
-
-        @foreach(GiftExchange g in Model.AllGiftExchanges)
-        {
-            <p>@g.Name</p>
-        }
-
+        <ul class="list-unstyled">
+            @foreach(GiftExchange g in Model.AllGiftExchanges)
+            {
+                if(g.MemberList.Any(m=>m.UserId == Context.Session.GetInt32("UserId")))
+                {
+                <form asp-action="OneGiftExchange" asp-controller="GiftExchange" asp-route-GiftExchangeId="@g.GiftExchangeId" method="get">
+                    <button type="submit" class="m-3">@g.Name</button>
+                </form>
+                }
+            }
+        </ul>
     </div>
 
 </div>

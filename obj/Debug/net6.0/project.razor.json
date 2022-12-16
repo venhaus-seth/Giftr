@@ -16318,6 +16318,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Member\\MemberForm.cshtml",
+      "TargetPath": "Views\\Member\\MemberForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"

@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Join a Gift Exchange";
+}
+@model ValidateGroupCode
+<div>
+    @await Html.PartialAsync("_Navbar")
+
+    <h1 class="text-center">Join a new Gift Exchange</h1>
+
+    <form asp-action="CreateMember" asp-controller="Member" method="post">
+
+        <div class="m-3">
+            <label asp-for="VGiftExchangeId"></label>
+            <select asp-for="VGiftExchangeId" class="form-control">
+
+                <option disabled selected value="">Select a Gift Exchange</option>
+
+                @foreach(GiftExchange g in ViewBag.AllGiftExchanges)
+                {
+                <option value=@g.GiftExchangeId>@g.Name @g.GiftExchangeId</option>
+                }
+
+            </select>
+            <span asp-validation-for="VGiftExchangeId" class="text-danger"></span>
+        </div>
+
+        <div class="m-3">
+            <label asp-for="VGroupCode"></label>
+            <input asp-for="VGroupCode" class="form-control">
+            <span asp-validation-for="VGroupCode" class="text-danger"></span>
+        </div>
+
+        <input asp-for="VUserId" type="hidden" value=@Context.Session.GetString("UserId")>
+
+        <button type="submit">Join Gift Exchange!</button>
+
+    </form>
+
+</div>

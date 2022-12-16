@@ -6,6 +6,7 @@ public class Member
     [Key]
     public int MemberId {get;set;}
     public int UserId {get;set;}
+    [Display(Name = "Select Gift Exchange")]
     public int GiftExchangeId {get;set;}
     public User? User {get;set;}
     public GiftExchange? GiftExchange {get;set;}

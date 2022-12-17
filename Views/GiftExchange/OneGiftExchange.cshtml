@@ -4,14 +4,33 @@
 @model MyViewModel
 <div>
     @await Html.PartialAsync("_Navbar")
-
-    <h1 class="text-center">The @Model.GiftExchange.Name Gift Exchange</h1>
-
+    
     <div class="text-center">
-        @foreach (Member m in Model.GiftExchange.MemberList)
+        <h1>The @Model.GiftExchange.Name Gift Exchange</h1>
+        @if(Model.GiftExchange.Admin.UserId == Context.Session.GetInt32("UserId"))
         {
-            <p class="m-3">@m.User.Username</p>
+        <small><a asp-action="EditGiftExchange" asp-controller="GiftExchange" asp-route-GiftExchangeId=@Model.GiftExchange.GiftExchangeId>Edit this Gift Exchange</a></small>
         }
+    </div>
+    
+
+    <div class="d-flex justify-content-evenly m-5">
+        <div class="text-center">
+            <h3>Members</h3>
+            @foreach (Member m in Model.GiftExchange.MemberList)
+            {
+                <p class="m-3">@m.User.Username</p>
+            }
+        </div>
+
+        <div>
+            <strong>Details</strong>
+            <p>@Model.GiftExchange.Details</p>
+            <strong>Budget</strong>
+            <p>$@Model.GiftExchange.Budget</p>
+            <strong>Exchange Date</strong>
+            <p>@Model.GiftExchange.ExchangeDate.ToString("MMMM dd, yyyy")</p>
+        </div>
     </div>
 
 </div>

@@ -1,5 +1,10 @@
 <div class="d-flex justify-content-around m-4">
-    <h3 class="d-flex align-items-center">Logged in as<span class="text-info m-2"> @Context.Session.GetString("Username")</span></h3>
+    <div class="d-flex">
+        <img src="~/logo.png" alt="Giftr logo" class="logo">
+        <h6 class="d-flex align-items-end m-4">Logged in as <span class="text-success text-decoration-underline mx-2"> @Context.Session.GetString("Username")</span></h6>
+    
+    </div>
+    
     <div>
         @* Add wishlist link   *@
         <a class="m-3 btn border" href="/giftexchange/dashboard"><span class="fs-5">Home</span></a>

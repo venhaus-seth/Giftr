@@ -15,11 +15,11 @@
     
 
     <div class="d-flex justify-content-evenly m-5">
-        <div class="text-center">
+        <div class="text-center d-flex flex-column">
             <h3>Members</h3>
             @foreach (Member m in Model.GiftExchange.MemberList)
             {
-                <p class="m-3">@m.User.Username</p>
+                <a asp-action="OneWishlist" asp-controller="User" asp-route-GiftExchangeId=class="m-2">@m.User.Username</a>
             }
         </div>
 

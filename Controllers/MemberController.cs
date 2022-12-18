@@ -17,7 +17,7 @@ public class MemberController : Controller
         _context = context;
     }
 
-//******************************GIFT EXCHANGE FORM***********************************************
+//******************************JOIN GIFT EXCHANGE FORM***********************************************
     [SessionCheck]
     [HttpGet("members/new")]
     public IActionResult MemberForm()
@@ -26,6 +26,7 @@ public class MemberController : Controller
         return View();
     }
 
+//******************************CREATE MEMBER***********************************************
     [SessionCheck]
     [HttpPost("members/create")]
     public IActionResult CreateMember(ValidateGroupCode newMember)

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "r4HeQgULRGvRbZkeKKOV4C+l46DfEloQb4GhsOa2H3w=",
+  "Hash": "frvmhjj6fpI7czL4uPxHk8QRXu12+twxJv2OG9Ee8JQ=",
   "Source": "Giftr",
   "BasePath": "_content/Giftr",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\wwwroot\\logo.png",
+      "SourceId": "Giftr",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\wwwroot\\",
+      "BasePath": "_content/Giftr",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.png"
     }
   ]
 }

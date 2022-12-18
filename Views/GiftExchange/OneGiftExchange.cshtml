@@ -6,7 +6,7 @@
     @await Html.PartialAsync("_Navbar")
     
     <div class="text-center">
-        <h1>The @Model.GiftExchange.Name Gift Exchange</h1>
+        <h1>The <span class="text-success text-decoration-underline">@Model.GiftExchange.Name</span> Gift Exchange</h1>
         @if(Model.GiftExchange.Admin.UserId == Context.Session.GetInt32("UserId"))
         {
         <small><a asp-action="EditGiftExchange" asp-controller="GiftExchange" asp-route-GiftExchangeId=@Model.GiftExchange.GiftExchangeId>Edit this Gift Exchange</a></small>
@@ -19,7 +19,7 @@
             <h3>Members</h3>
             @foreach (Member m in Model.GiftExchange.MemberList)
             {
-                <a asp-action="OneWishlist" asp-controller="User" asp-route-GiftExchangeId=class="m-2">@m.User.Username</a>
+                <a asp-action="OneWishlist" asp-controller="Item" asp-route-UserId=@m.User.UserId class="m-2">@m.User.Username</a>
             }
         </div>
 

@@ -60,7 +60,6 @@ public class GiftExchangeController : Controller
     [HttpGet("giftexchanges/{GiftExchangeId}")]
     public IActionResult OneGiftExchange(int GiftExchangeId)
     {
-        // System.Console.WriteLine("test");
         MyViewModel MyModels = new MyViewModel
         {
             GiftExchange = _context.GiftExchanges.Include(ge=>ge.MemberList)

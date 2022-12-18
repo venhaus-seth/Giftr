@@ -16323,6 +16323,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Item\\OneWishList.cshtml",
+      "TargetPath": "Views\\Item\\OneWishList.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Home\\_Login.cshtml",
       "TargetPath": "Views\\Home\\_Login.cshtml",
       "FileKind": "mvc"

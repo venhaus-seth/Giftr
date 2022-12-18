@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = @Model.User.Username + "'s WishList";
+}
+@model MyViewModel
+<div>
+    @await Html.PartialAsync("_Navbar")
+    
+    <div class="text-center">
+        <h1><span class="text-success text-decoration-underline">@Model.User.Username</span>'s Wishlist</h1>
+    </div>
+
+    <div class="text-center d-flex flex-column">
+        @foreach (Item i in Model.User.ItemList)
+        {
+            <div class="Item justify-content-between">
+                <div class="d-flex flex-column align-items-start justify-content-evenly m-4">
+                    <h3>@i.Name</h3>
+                    <p>@i.Description</p>
+                </div>
+                
+                <div>
+                    <img class="h-100 w-100" src=@i.Image></img>
+                </div>
+            </div>
+            
+        }
+    </div>
+</div>

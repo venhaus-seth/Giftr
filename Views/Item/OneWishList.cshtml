@@ -7,9 +7,17 @@
     
     <div class="text-center">
         <h1><span class="text-success text-decoration-underline">@Model.User.Username</span>'s Wishlist</h1>
+        @* Insert return button once You figure out how to pass in the specific GIftExchangeId *@
+        @* @foreach (GiftExchange ge in Model.User.AdminOfList)
+        {
+            if (Model.User.Memberships.Count() == 1)
+            {
+                <a asp-action="OneGiftExchange" asp-controller="GiftExchange"></a>
+            }
+        } *@
     </div>
 
-    <div class="text-center d-flex flex-column">
+    <div class="text-center d-flex flex-column my-5">
         @foreach (Item i in Model.User.ItemList)
         {
             <div class="Item justify-content-between">
@@ -18,8 +26,8 @@
                     <p>@i.Description</p>
                 </div>
                 
-                <div>
-                    <img class="h-100 w-100" src=@i.Image></img>
+                <div class="d-flex align-items-center mx-4">
+                    <img class="h-75" src=@i.Image></img>
                 </div>
             </div>
             

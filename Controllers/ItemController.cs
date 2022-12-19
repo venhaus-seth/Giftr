@@ -25,6 +25,7 @@ public class ItemController : Controller
         MyViewModel MyModels = new MyViewModel
         {
             User = _context.Users.Include(u=>u.ItemList)
+                                .Include(u=>u.Memberships)
                                 .FirstOrDefault(u=>u.UserId == UserId)
         };
     return View(MyModels);

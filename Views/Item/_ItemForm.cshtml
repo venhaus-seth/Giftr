@@ -1,0 +1,31 @@
+
+@model Item
+
+<div>
+    <form asp-action="CreateItem" asp-controller="Item" method="post">
+
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control">
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="Image"></label>
+            <input asp-for="Image" class="form-control">
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+
+        <input type="hidden" asp-for="UserId" value=@Context.Session.GetInt32("UserId") >
+
+        <div class="text-center">
+            <button type="submit">Add Item</button>
+        </div>
+    </form>
+</div>

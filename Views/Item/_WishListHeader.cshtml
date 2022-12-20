@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Add Item to your Wishlist";
+}
+
+@model User
+
+<div class="text-center">
+    <h1><span class="text-success text-decoration-underline">@Model.Username</span>'s Wishlist</h1>
+    @if (Model.UserId == Context.Session.GetInt32("UserId"))
+    {
+    <div>
+        <a asp-action="AddItem" asp-controller="Item">Add</a>
+    </div>
+    }
+</div>

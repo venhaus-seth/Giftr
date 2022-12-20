@@ -27,3 +27,7 @@ body {
   width: 450px;
   display: flex;
 }
+
+.settingIcon {
+  height: 20px;
+}

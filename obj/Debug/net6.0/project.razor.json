@@ -16303,13 +16303,38 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Item\\_EditItemForm.cshtml",
+      "TargetPath": "Views\\Item\\_EditItemForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Item\\EditItem.cshtml",
+      "TargetPath": "Views\\Item\\EditItem.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\GiftExchange\\Dashboard.cshtml",
       "TargetPath": "Views\\GiftExchange\\Dashboard.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Item\\_Wishlist.cshtml",
+      "TargetPath": "Views\\Item\\_Wishlist.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Item\\_ItemForm.cshtml",
+      "TargetPath": "Views\\Item\\_ItemForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Item\\_WishListHeader.cshtml",
+      "TargetPath": "Views\\Item\\_WishListHeader.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16365,6 +16390,11 @@
     {
       "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\Views\\Item\\AddItem.cshtml",
+      "TargetPath": "Views\\Item\\AddItem.cshtml",
       "FileKind": "mvc"
     }
   ],

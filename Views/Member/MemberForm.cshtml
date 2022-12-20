@@ -21,7 +21,7 @@
 
                 @foreach(GiftExchange g in ViewBag.AllGiftExchanges)
                 {
-                <option value=@g.GiftExchangeId>@g.Name @g.GiftExchangeId</option>
+                <option value=@g.GiftExchangeId>@g.Name</option>
                 }
             </select>
             <span asp-validation-for="VGiftExchangeId" class="text-danger"></span>

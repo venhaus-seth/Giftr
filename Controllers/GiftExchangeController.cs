@@ -98,8 +98,8 @@ public class GiftExchangeController : Controller
             OldGE.UpdatedAt = DateTime.Now;
             _context.SaveChanges();
 
-            return RedirectToAction("OneGiftExchange", GiftExchangeId);
+            return RedirectToAction("OneGiftExchange", new {GiftExchangeId});
         }
-        return View("EditGiftExchange", GiftExchangeId);
+        return View("EditGiftExchange", new {GiftExchangeId});
     }
 }

@@ -19,12 +19,8 @@
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
 
-        <div class="m-3">
-            <label asp-for="GroupCode"></label>
-            <input asp-for="GroupCode" class="form-control">
-            <span asp-validation-for="GroupCode" class="text-danger"></span>
-        </div>
-
+        <input type="hidden" asp-for="GroupCode" value=@Model.GroupCode>
+            
         <div class="m-3">
             <label asp-for="Budget"></label>
             <input asp-for="Budget" class="form-control">
@@ -45,13 +41,9 @@
 
         <input type="hidden" asp-for="UserId" value=@Context.Session.GetInt32("UserId") >
 
-        <div class="d-flex justify-content-center">
-            <div class="text-center">
-                <button type="submit">Update</button>
-            </div>
-            
+        <div class="text-center">
+            <button type="submit">Update</button>
         </div>
-        
         
     </form>
 </div>

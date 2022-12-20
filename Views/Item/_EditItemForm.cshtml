@@ -1,8 +1,9 @@
 
 @model Item
 
-<div>
-    <form asp-action="CreateItem" asp-controller="Item" method="post">
+<div class="my-5">
+    <h3 class="text-center">Edit</h3>
+    <form asp-action="UpdateItem" asp-controller="Item" asp-route-ItemId=@Model.ItemId method="post">
 
         <div>
             <label asp-for="Name"></label>
@@ -22,7 +23,7 @@
             <span asp-validation-for="Image" class="text-danger"></span>
         </div>
 
-        <div class="text-center">
+        <div class="text-center my-2">
             <button type="submit">Edit Item</button>
         </div>
     </form>

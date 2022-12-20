@@ -23,6 +23,7 @@ public class ItemController : Controller
     [HttpGet("items/{UserId}")]
     public IActionResult OneWishList(int UserId)
     {
+        System.Console.WriteLine("*****************" + UserId);
         MyViewModel MyModels = new MyViewModel
         {
             User = _context.Users.Include(u=>u.ItemList)
@@ -88,7 +89,7 @@ public class ItemController : Controller
             OldItem.UpdatedAt = DateTime.Now;
 
             _context.SaveChanges();
-            return RedirectToAction("OneWishList", HttpContext.Session.GetInt32("UserId"));
+            return RedirectToAction("OneWishList", new {OldItem.UserId});
         }
         return View("EditItem", ItemId);
     }

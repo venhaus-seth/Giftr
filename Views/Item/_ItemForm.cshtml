@@ -1,7 +1,8 @@
 
 @model Item
 
-<div>
+<div class="my-5">
+    <h3 class="text-center">Add</h3>
     <form asp-action="CreateItem" asp-controller="Item" method="post">
 
         <div>
@@ -24,7 +25,7 @@
 
         <input type="hidden" asp-for="UserId" value=@Context.Session.GetInt32("UserId") >
 
-        <div class="text-center">
+        <div class="text-center my-2">
             <button type="submit">Add Item</button>
         </div>
     </form>

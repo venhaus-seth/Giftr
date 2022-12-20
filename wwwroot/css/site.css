@@ -17,8 +17,13 @@ body {
   margin-bottom: 60px;
 }
 
-.logo {
+.navlogo {
   height: 75px;
+}
+
+.logo {
+  height: 150px;
+  margin-top: 20px;
 }
 
 .Item {

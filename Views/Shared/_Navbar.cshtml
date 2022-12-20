@@ -1,12 +1,12 @@
 <div class="d-flex justify-content-around m-4">
     <div class="d-flex">
-        <img src="~/logo.png" alt="Giftr logo" class="logo">
+        <img src="~/logo.png" alt="Giftr logo" class="navlogo">
         <h6 class="d-flex align-items-end m-4">Logged in as <span class="text-success text-decoration-underline mx-2"> @Context.Session.GetString("Username")</span></h6>
     </div>
     
     <div>
-        <a class="m-3 btn border" asp-action="OneWishList" asp-controller="Item" asp-route-UserId=@Context.Session.GetInt32("UserId") ><span class="fs-5">Wishlist</span></a>
-        <a class="m-3 btn border" asp-action="Dashboard" asp-controller="GiftExchange"><span class="fs-5">Home</span></a>
-        <a class="m-3 btn border" asp-action="LogOutUser" asp-controller="Home"><span class="fs-5">Logout</span></a>
+        <a class="m-3 btn border-success bg-success:hover" asp-action="OneWishList" asp-controller="Item" asp-route-UserId=@Context.Session.GetInt32("UserId") ><span class="fs-5">Wishlist</span></a>
+        <a class="m-3 btn border-success" asp-action="Dashboard" asp-controller="GiftExchange"><span class="fs-5">Home</span></a>
+        <a class="m-3 btn border-success" asp-action="LogOutUser" asp-controller="Home"><span class="fs-5">Logout</span></a>
     </div>
 </div>

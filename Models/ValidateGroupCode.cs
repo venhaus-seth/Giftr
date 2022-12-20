@@ -7,7 +7,7 @@ public class ValidateGroupCode
     [Display(Name = "All Gift Exchanges")]
     public int VGiftExchangeId { get; set; } 
     
-    [Required]
+    [Required(ErrorMessage = "Please enter the Group Code")]
     [DataType(DataType.Password)]
     [Display(Name = "Group Code")]
     public string VGroupCode { get; set; } 

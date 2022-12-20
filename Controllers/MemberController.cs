@@ -31,21 +31,36 @@ public class MemberController : Controller
     [HttpPost("members/create")]
     public IActionResult CreateMember(ValidateGroupCode newMember)
     {
-
-        GiftExchange? giftExchangeInDb = _context.GiftExchanges.FirstOrDefault(c=>c.GiftExchangeId == newMember.VGiftExchangeId);
-
-        Member MemberToAdd = new Member()
+        if (ModelState.IsValid)
         {
-        UserId = (int)HttpContext.Session.GetInt32("UserId"),
-        GiftExchangeId = newMember.VGiftExchangeId
-        };
+            //find gift exchange that was selected in form
+            GiftExchange? giftExchangeInDb = _context.GiftExchanges.FirstOrDefault(c=>c.GiftExchangeId == newMember.VGiftExchangeId);
 
-        if(newMember.VGroupCode == giftExchangeInDb.GroupCode)
-        {
-            _context.Members.Add(MemberToAdd);
-            _context.SaveChanges();
-            return RedirectToAction("Dashboard", "GiftExchange");
+            //create member object with session-UserId and giftExchangeId from form
+            Member MemberToAdd = new Member()
+            {
+            UserId = (int)HttpContext.Session.GetInt32("UserId"),
+            GiftExchangeId = newMember.VGiftExchangeId
+            };
+
+            //verify that MemberToAdd is unique, if not render error msg and View to form 
+            if (_context.Members.Any(m=>m.GiftExchangeId == MemberToAdd.GiftExchangeId && m.UserId == MemberToAdd.UserId))
+            {
+                ModelState.AddModelError("VGroupCode", "You are already a member of this Gift Exchange!");
+                ViewBag.AllGiftExchanges = _context.GiftExchanges.OrderBy(c=>c.ExchangeDate).ToList();
+                return View("MemberForm");
+            }
+
+            //verify that the groupCode is correct. If so, add member to DB
+            if(newMember.VGroupCode == giftExchangeInDb.GroupCode)
+            {
+                _context.Members.Add(MemberToAdd);
+                _context.SaveChanges();
+                return RedirectToAction("Dashboard", "GiftExchange");
+            }
         }
+        //Return to the memberform with viewbag of all GE's
+        ViewBag.AllGiftExchanges = _context.GiftExchanges.OrderBy(c=>c.ExchangeDate).ToList();
         return View("MemberForm");
     }
 }

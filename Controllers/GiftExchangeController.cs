@@ -48,7 +48,21 @@ public class GiftExchangeController : Controller
     {
         if (ModelState.IsValid)
         {
+            //add new GE to DB
             _context.GiftExchanges.Add(newGiftExchange);
+
+            //save the new gift exchange
+            _context.SaveChanges();
+
+            //make admin a member of new GE
+            Member adminMember = new Member()
+            {
+                UserId = (int)HttpContext.Session.GetInt32("UserId"),
+                GiftExchangeId = newGiftExchange.GiftExchangeId
+            };
+            _context.Members.Add(adminMember);
+            
+            //save and return to dashboard
             _context.SaveChanges();
             return RedirectToAction("Dashboard");
         }
@@ -84,12 +98,12 @@ public class GiftExchangeController : Controller
     [HttpPost("giftexchanges/{GiftExchangeId}/update")]
     public IActionResult UpdateGiftExchange(GiftExchange GEToUpdate, int GiftExchangeId)
     {
-        System.Console.WriteLine(GEToUpdate.Name);
         if (ModelState.IsValid)
         {
-            System.Console.WriteLine("test - after IsValid");
+            //find GE that we will update
             GiftExchange? OldGE = _context.GiftExchanges.FirstOrDefault(ge=>ge.GiftExchangeId == GiftExchangeId);
 
+            //set oldGE to new values
             OldGE.Name = GEToUpdate.Name;
             OldGE.GroupCode = GEToUpdate.GroupCode;
             OldGE.Budget = GEToUpdate.Budget;

@@ -3,18 +3,22 @@
 <div class="text-center d-flex flex-column my-5">
     @foreach (Item i in Model.ItemList)
     {
-        <div class="Item justify-content-between">
+        <div class="Item justify-content-between rounded">
 
             <div class="d-flex flex-column align-items-start justify-content-evenly m-4">
                 <h3>@i.Name</h3>
                 <p class="text-start">@i.Description</p>
+
+                @if (Model.UserId == Context.Session.GetInt32("UserId"))
+                {
                 <a asp-action="EditItem" asp-controller="Item" asp-route-ItemId=@i.ItemId>
                     <img class="settingIcon" src="https://tse3.mm.bing.net/th?id=OIP.QEe-GU09hcZdV4lC32nbOAHaHa&pid=Api" alt="Edit Button">
                 </a>
+                }
             </div>
-            
+
             <div class="d-flex align-items-center mx-4">
-                <img class="h-75 w-100" src=@i.Image></img>
+                <img class="itemImage" src=@i.Image></img>
             </div>
 
         </div>

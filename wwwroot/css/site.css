@@ -18,21 +18,120 @@ body {
 }
 
 .navlogo {
-  height: 75px;
+  height: 100px;
+}
+
+.navtext {
+  font-size: large;
 }
 
 .logo {
-  height: 150px;
+  height: 200px;
   margin-top: 20px;
 }
 
 .Item {
   border: black 1px solid;
-  height: 200px;
-  width: 450px;
+  height: 130px;
+  width: 400px;
   display: flex;
+  margin: 5px;
+  box-shadow: 2px 2px rgb(53, 147, 53);
+}
+
+.itemImage {
+  height: 100px;
+  width: 100px;
 }
 
 .settingIcon {
   height: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.text {
+  font-family: "Candara"
+}
+
+.lgBtn {
+  background-color: rgb(53, 147, 53);
+  /* border: 1px rgb(21, 68, 21) solid; */
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  box-shadow: 2px 3px black;
+}
+
+.lgBtn:hover {
+  background-color: rgb(62, 173, 62);
+  color: black;
+}
+
+.smBtn {
+  color: rgb(219, 25, 25);
+  text-decoration: none;
+  border: none;
+  background-color: white;
+}
+
+.smBtn:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.listItem {
+  background-color: #c0c0c0;
+  text-align: center;
+  box-shadow: 2px 3px black;
+  margin: 5px
+}
+
+.listItem:hover {
+  /* background-color: rgb(223, 222, 222); */
+  background: radial-gradient(circle, rgba(207,195,55,1) 0%, rgba(192,192,192,1) 100%);
+}
+
+.glow {
+  text-shadow: 1px 1px 10px green;
+}
+
+.formItem {
+  width: 30%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.line {
+  border-top: 2px solid rgb(4, 126, 31);
+  margin: 0;
+  opacity: 1;
+  width: auto;
+}
+
+.details {
+  margin-top: px;
+  margin-bottom: 30px;
+}
+
+.dheader {
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.vLine {
+  border-right: 2px solid rgb(4, 126, 31)
+}
+
+.wHeader {
+  height: auto;
 }

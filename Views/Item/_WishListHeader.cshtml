@@ -4,12 +4,20 @@
 
 @model User
 
-<div class="text-center">
-    <h1><span class="text-success text-decoration-underline">@Model.Username</span>'s Wishlist</h1>
+<div class="text-center wHeader">
+    
     @if (Model.UserId == Context.Session.GetInt32("UserId"))
     {
-    <div>
-        <a asp-action="AddItem" asp-controller="Item">Add</a>
-    </div>
+        <h3 class="header">Your Wishlist</h3>
+        <div class="line w-25 m-auto"> </div>
+        <a class="lgBtn rounded wHeader" asp-action="AddItem" asp-controller="Item">
+            Add
+        </a>
     }
+    else 
+    {
+        <h3 class="header"><span class="glow">@Model.Username</span>'s Wishlist</h3>
+        <div class="line w-25 m-auto"></div>
+    }
+    
 </div>

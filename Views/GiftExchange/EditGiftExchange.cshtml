@@ -5,15 +5,17 @@
 <div>
     @await Html.PartialAsync("_Navbar")
 
-    <h1 class="text-center">Edit this Gift Exchange</h1>
+    <h3 class="header">Edit this Gift Exchange</h3>
     
     <div class="text-center">
-        <a type="button" class="btn text-primary text-decoration-underline" asp-action="OneGiftExchange" asp-controller="GiftExchange" asp-route-GiftExchangeId=@Model.GiftExchangeId><small>Return to @Model.Name Gift Exchange</small></a>
+        <a type="button" class="smBtn" asp-action="OneGiftExchange" asp-controller="GiftExchange" asp-route-GiftExchangeId=@Model.GiftExchangeId><small>Return</small></a>
     </div>
 
-    <form asp-action="UpdateGiftExchange" asp-controller="GiftExchange" asp-route-GiftExchangeId=@Model.GiftExchangeId method="post">
+    <hr class="line w-25 m-auto">
 
-        <div class="m-3">
+    <form class="m-3" asp-action="UpdateGiftExchange" asp-controller="GiftExchange" asp-route-GiftExchangeId=@Model.GiftExchangeId method="post">
+
+        <div class="formItem">
             <label asp-for="Name"></label>
             <input asp-for="Name" class="form-control">
             <span asp-validation-for="Name" class="text-danger"></span>
@@ -21,19 +23,19 @@
 
         <input type="hidden" asp-for="GroupCode" value=@Model.GroupCode>
             
-        <div class="m-3">
+        <div class="formItem">
             <label asp-for="Budget"></label>
             <input asp-for="Budget" class="form-control">
             <span asp-validation-for="Budget" class="text-danger"></span>
         </div>
         
-        <div class="m-3">
+        <div class="formItem">
             <label asp-for="ExchangeDate"></label>
             <input asp-for="ExchangeDate" class="form-control">
             <span asp-validation-for="ExchangeDate" class="text-danger"></span>
         </div>
 
-        <div class="m-3">
+        <div class="formItem">
             <label asp-for="Details"></label>
             <textarea asp-for="Details" class="form-control"></textarea>
             <span asp-validation-for="Details" class="text-danger"></span>
@@ -42,7 +44,7 @@
         <input type="hidden" asp-for="UserId" value=@Context.Session.GetInt32("UserId") >
 
         <div class="text-center">
-            <button type="submit">Update</button>
+            <button class="lgBtn btn" type="submit">Update</button>
         </div>
         
     </form>

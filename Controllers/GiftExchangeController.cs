@@ -78,6 +78,7 @@ public class GiftExchangeController : Controller
         {
             GiftExchange = _context.GiftExchanges.Include(ge=>ge.MemberList)
                                         .ThenInclude(m=>m.User)
+                                        .ThenInclude(u=>u.ItemList)
                                         .FirstOrDefault(ge=>ge.GiftExchangeId == GiftExchangeId)
         };
 

@@ -5,15 +5,17 @@
 <div>
     @await Html.PartialAsync("_Navbar")
 
-    <h1 class="text-center">Join a new Gift Exchange</h1>
+    <h3 class="header">Join a Gift Exchange</h3>
 
     <div class="text-center">
-        <a type="button" class="btn text-primary text-decoration-underline" asp-action="Dashboard" asp-controller="GiftExchange"><small>Return to Dashboard</small></a>
+        <a type="button" class="smBtn" asp-action="Dashboard" asp-controller="GiftExchange"><small>Return to Dashboard</small></a>
     </div>
 
-    <form asp-action="CreateMember" asp-controller="Member" method="post">
+    <hr class="line w-25 m-auto">
 
-        <div class="m-3">
+    <form class="m-3" asp-action="CreateMember" asp-controller="Member" method="post">
+
+        <div class="formItem">
             <label asp-for="VGiftExchangeId"></label>
             <select asp-for="VGiftExchangeId" class="form-control">
 
@@ -27,13 +29,14 @@
             <span asp-validation-for="VGiftExchangeId" class="text-danger"></span>
         </div>
 
-        <div class="m-3">
+        <div class="formItem">
             <label asp-for="VGroupCode"></label>
             <input asp-for="VGroupCode" class="form-control">
             <span asp-validation-for="VGroupCode" class="text-danger"></span>
         </div>
-
-        <button type="submit">Join Gift Exchange!</button>
+        <div class="text-center">
+            <button class="lgBtn btn" type="submit">Join Gift Exchange!</button>
+        </div>
 
     </form>
 

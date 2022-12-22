@@ -3,28 +3,30 @@
 
 <div class="my-5">
     <h3 class="text-center">Edit</h3>
-    <form asp-action="UpdateItem" asp-controller="Item" asp-route-ItemId=@Model.ItemId method="post">
+    <hr class="line w-50 m-auto">
+    <form class="m-3" asp-action="UpdateItem" asp-controller="Item" asp-route-ItemId=@Model.ItemId method="post">
 
-        <div>
+        <div class="my-3">
             <label asp-for="Name"></label>
             <input asp-for="Name" class="form-control">
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
 
-        <div>
+        <div class="my-3">
             <label asp-for="Description"></label>
             <input asp-for="Description" class="form-control">
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
 
-        <div>
+        <div class="my-3">
             <label asp-for="Image"></label>
             <input asp-for="Image" class="form-control">
+            <small>*please only insert an image URL address</small>
             <span asp-validation-for="Image" class="text-danger"></span>
         </div>
 
-        <div class="text-center my-2">
-            <button type="submit">Edit Item</button>
+        <div class="text-center">
+            <button class="lgBtn btn m-2" type="submit">Edit Item</button>
         </div>
     </form>
 </div>

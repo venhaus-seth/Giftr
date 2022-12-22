@@ -9,7 +9,8 @@ public class Item
     [MinLength(2)]
     public string Name {get;set;}
     [Required]
-    [Range(0,25, ErrorMessage = "description cannot be longer the 25 characters")]
+    [MinLength(0)]
+    [MaxLength(25)]
     public string Description {get;set;}
     public string Image {get;set;}
     public int UserId {get;set;}

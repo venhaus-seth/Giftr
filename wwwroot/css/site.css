@@ -48,6 +48,11 @@ body {
   height: 20px;
 }
 
+.settingIcon:hover {
+  border: 2px solid rgb(189, 22, 22);
+  border-radius: 30%;
+}
+
 .header {
   text-align: center;
 }

@@ -49,15 +49,22 @@ public class ItemController : Controller
 //******************************CREATE ITEM***********************************************
     [SessionCheck]
     [HttpPost("items/create")]
-    public ActionResult CreateItem(Item newItem)
+    public IActionResult CreateItem(Item newItem)
     {
         if (ModelState.IsValid)
         {
             _context.Items.Add(newItem);
             _context.SaveChanges();
-            return RedirectToAction("AddItem");
+            return RedirectToAction("OneWishList", "Item");
+        } else 
+        {
+        MyViewModel MyModels = new MyViewModel
+        {
+            User = _context.Users.Include(u=>u.ItemList)
+                                .FirstOrDefault(u=>u.UserId == HttpContext.Session.GetInt32("UserId"))
+        };
+        return View("AddItem", MyModels);
         }
-        return View("AddItem");
     }
 
 //******************************EDIT ITEM FORM***********************************************
@@ -77,7 +84,7 @@ public class ItemController : Controller
 //******************************UPDATE ITEM***********************************************
     [SessionCheck]
     [HttpPost("items/{ItemId}/update")]
-    public ActionResult UpdateItem(Item ItemToUpdate, int ItemId)
+    public IActionResult UpdateItem(Item ItemToUpdate, int ItemId)
     {
         if (ModelState.IsValid)
         {
@@ -92,5 +99,17 @@ public class ItemController : Controller
             return RedirectToAction("OneWishList", new {OldItem.UserId});
         }
         return View("EditItem", ItemId);
+    }
+    //******************************DESTROY ITEM***********************************************
+    [SessionCheck]
+    [HttpPost("items/{ItemId}/Destroy")]
+    public IActionResult DestroyItem(int ItemId)
+    {
+        System.Console.WriteLine(ItemId);
+        Item? ItemToDelete = _context.Items.SingleOrDefault(i=>i.ItemId == ItemId);
+
+        _context.Items.Remove(ItemToDelete);
+        _context.SaveChanges();
+        return RedirectToAction("OneWishList");
     }
 }

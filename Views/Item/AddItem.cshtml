@@ -8,10 +8,10 @@
     @await Html.PartialAsync("_WishlistHeader", @Model.User)
 
     <div class=" d-flex justify-content-center">
-        <div class=" d-flex  flex-column align-items-center mx-5">
+        <div class=>
             @await Html.PartialAsync("_Wishlist", @Model.User)
         </div>
-        <div>
+        <div class="mx-5">
             @await Html.PartialAsync("_ItemForm", @Model.Item)
         </div>
     </div>

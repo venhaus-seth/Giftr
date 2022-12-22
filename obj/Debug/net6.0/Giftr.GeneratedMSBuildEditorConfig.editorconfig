@@ -8,89 +8,89 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Giftr
 build_property.RootNamespace = Giftr
-build_property.ProjectDir = C:\Users\venha\Documents\CodingDojo\CSharp\Giftr\
+build_property.ProjectDir = c:\Users\venha\Documents\CodingDojo\CSharp\Giftr\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\venha\Documents\CodingDojo\CSharp\Giftr
+build_property.MSBuildProjectDirectory = c:\Users\venha\Documents\CodingDojo\CSharp\Giftr
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/GiftExchange/Dashboard.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/GiftExchange/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lmdEV4Y2hhbmdlXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/GiftExchange/EditGiftExchange.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/GiftExchange/EditGiftExchange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lmdEV4Y2hhbmdlXEVkaXRHaWZ0RXhjaGFuZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/GiftExchange/GiftExchangeForm.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/GiftExchange/GiftExchangeForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lmdEV4Y2hhbmdlXEdpZnRFeGNoYW5nZUZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/GiftExchange/OneGiftExchange.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/GiftExchange/OneGiftExchange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lmdEV4Y2hhbmdlXE9uZUdpZnRFeGNoYW5nZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Home/Index.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Home/_Login.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Home/_Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/AddItem.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/AddItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxBZGRJdGVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/EditItem.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/EditItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxFZGl0SXRlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/OneWishList.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/OneWishList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxPbmVXaXNoTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/_EditItemForm.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/_EditItemForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxfRWRpdEl0ZW1Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/_ItemForm.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/_ItemForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxfSXRlbUZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/_Wishlist.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/_Wishlist.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxfV2lzaGxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/_WishListHeader.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Item/_WishListHeader.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVxfV2lzaExpc3RIZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Member/MemberForm.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Member/MemberForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyXE1lbWJlckZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Shared/Error.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Shared/_Navbar.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Shared/_Navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/_ViewImports.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/_ViewStart.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Shared/_Layout.cshtml]
+[c:/Users/venha/Documents/CodingDojo/CSharp/Giftr/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-19bqtlhwmt

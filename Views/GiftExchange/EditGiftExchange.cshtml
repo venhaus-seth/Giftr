@@ -20,8 +20,6 @@
             <input asp-for="Name" class="form-control">
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
-
-        <input type="hidden" asp-for="GroupCode" value=@Model.GroupCode>
             
         <div class="formItem">
             <label asp-for="Budget"></label>
@@ -42,6 +40,7 @@
         </div>
 
         <input type="hidden" asp-for="UserId" value=@Context.Session.GetInt32("UserId") >
+        <input type="hidden" asp-for="GroupCode" value=@Model.GroupCode>
 
         <div class="text-center">
             <button class="lgBtn btn" type="submit">Update</button>

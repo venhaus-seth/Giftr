@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "STQvjB0pKEJzRFH0MbvzsaG+dQ/7ANcJPcR/TzdbSUI=",
+  "Hash": "CpBezy9CXowV4NkVq9+5k2d2uhNsyo5xZB6qBeOimAo=",
   "Source": "Giftr",
   "BasePath": "_content/Giftr",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\logoWithNewFont_Montserrat.png"
+    },
+    {
+      "Identity": "C:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\wwwroot\\presentIcon.png",
+      "SourceId": "Giftr",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\venha\\Documents\\CodingDojo\\CSharp\\Giftr\\wwwroot\\",
+      "BasePath": "_content/Giftr",
+      "RelativePath": "presentIcon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\presentIcon.png"
     }
   ]
 }

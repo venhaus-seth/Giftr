@@ -90,7 +90,7 @@ public class GiftExchangeController : Controller
     [HttpGet("giftexchanges/{GiftExchangeId}/edit")]
     public IActionResult EditGiftExchange(int GiftExchangeId)
     {
-        GiftExchange? GEInDb = _context.GiftExchanges.SingleOrDefault(ge=>ge.GiftExchangeId == GiftExchangeId);
+        GiftExchange? GEInDb = _context.GiftExchanges.FirstOrDefault(ge=>ge.GiftExchangeId == GiftExchangeId);
         return View(GEInDb);
     }
 
@@ -99,10 +99,14 @@ public class GiftExchangeController : Controller
     [HttpPost("giftexchanges/{GiftExchangeId}/update")]
     public IActionResult UpdateGiftExchange(GiftExchange GEToUpdate, int GiftExchangeId)
     {
+
+        //find GE that we will update
+        GiftExchange? OldGE = _context.GiftExchanges.FirstOrDefault(ge=>ge.GiftExchangeId == GiftExchangeId);
+
+        System.Console.WriteLine("*******************in update page");
         if (ModelState.IsValid)
         {
-            //find GE that we will update
-            GiftExchange? OldGE = _context.GiftExchanges.FirstOrDefault(ge=>ge.GiftExchangeId == GiftExchangeId);
+            System.Console.WriteLine("*******************in IF condition ");
 
             //set oldGE to new values
             OldGE.Name = GEToUpdate.Name;
@@ -114,7 +118,8 @@ public class GiftExchangeController : Controller
             _context.SaveChanges();
 
             return RedirectToAction("OneGiftExchange", new {GiftExchangeId});
+        } else {
+            return View("EditGiftExchange", OldGE);
         }
-        return View("EditGiftExchange", new {GiftExchangeId});
     }
 }

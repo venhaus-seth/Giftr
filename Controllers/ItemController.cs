@@ -55,7 +55,7 @@ public class ItemController : Controller
         {
             _context.Items.Add(newItem);
             _context.SaveChanges();
-            return RedirectToAction("OneWishList", "Item");
+            return RedirectToAction("OneWishList", new {newItem.UserId});
         } else 
         {
         MyViewModel MyModels = new MyViewModel
@@ -86,8 +86,10 @@ public class ItemController : Controller
     [HttpPost("items/{ItemId}/update")]
     public IActionResult UpdateItem(Item ItemToUpdate, int ItemId)
     {
+        System.Console.WriteLine("before modelstate");
         if (ModelState.IsValid)
         {
+            System.Console.WriteLine("after modelstate");
             Item? OldItem = _context.Items.FirstOrDefault(i=>i.ItemId == ItemId);
             
             OldItem.Name = ItemToUpdate.Name;
@@ -102,7 +104,7 @@ public class ItemController : Controller
     }
     //******************************DESTROY ITEM***********************************************
     [SessionCheck]
-    [HttpPost("items/{ItemId}/Destroy")]
+    [HttpPost("items/{ItemId}/destroy")]
     public IActionResult DestroyItem(int ItemId)
     {
         System.Console.WriteLine(ItemId);
@@ -110,6 +112,6 @@ public class ItemController : Controller
 
         _context.Items.Remove(ItemToDelete);
         _context.SaveChanges();
-        return RedirectToAction("OneWishList");
+        return RedirectToAction("OneWishList", new {ItemToDelete.UserId});
     }
 }

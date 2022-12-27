@@ -9,7 +9,7 @@
         <h3 class="header">The <span class="glow">@Model.GiftExchange.Name</span> Gift Exchange</h3 class="header">
         @if(Model.GiftExchange.UserId == Context.Session.GetInt32("UserId"))
         {
-        <a class="smBtn" asp-action="EditGiftExchange" asp-controller="GiftExchange" asp-route-GiftExchangeId=@Model.GiftExchange.GiftExchangeId>
+        <a class="smBtn" href="/GiftExchanges/@Model.GiftExchange.GiftExchangeId/edit">
             Edit Gift Exchange
         </a>
         }

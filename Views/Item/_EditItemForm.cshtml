@@ -25,6 +25,10 @@
             <span asp-validation-for="Image" class="text-danger"></span>
         </div>
 
+        @* <input type="hidden" asp-for="UserId" value=@Context.Session.GetInt32("UserId") >
+        <input type="hidden" asp-for="ItemId" value=@Model.ItemId > *@
+
+
         <div class="text-center">
             <button class="lgBtn btn m-2" type="submit">Edit Item</button>
         </div>
